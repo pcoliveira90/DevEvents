@@ -7,17 +7,37 @@ namespace DevEvents.API.Entities
 {
    public class User
    {
-      public int id { get; set; }
+      private int id { get; set; }
 
-      public string username { get; set; }
+      private string username { get; set; }
 
-      public DateTime birthDate { get; set; }
+      private DateTime birthDate { get; set; }
 
-      public string email { get; set; }
+      private string email { get; set; }
 
-      public DateTime dateRegister { get; set; }
+      private DateTime dateRegister { get; set; }
 
-      public bool active { get; set; }
+      private bool active { get; set; }
 
+      public User(int id, string username, DateTime birthDate, string email, DateTime dateRegister, bool active)
+      {
+         this.id = id;
+         this.username = username;
+         this.birthDate = birthDate;
+         this.email = email;
+         this.dateRegister = dateRegister;
+         this.active = active;
+      }
+
+      public override bool Equals(object obj)
+      {
+         return obj is User user &&
+                id == user.id;
+      }
+
+      public override int GetHashCode()
+      {
+         return HashCode.Combine(id);
+      }
    }
 }
