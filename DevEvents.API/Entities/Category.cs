@@ -7,11 +7,11 @@ namespace DevEvents.API.Entities
 {
    public class Category
    {
-      private int id { get; set; }
+      public int id { get; set; }
 
-      private string description { get; set; }
+      public string description { get; set; }
 
-      private bool active { get; set; }
+      public bool active { get; set; }
 
       public Category()
       {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,17 +8,19 @@ namespace DevEvents.API.Entities
 {
    public class User
    {
-      private int id { get; set; }
+      public int id { get; set; }
 
-      private string username { get; set; }
+      public string username { get; set; }
 
-      private DateTime birthDate { get; set; }
+      public DateTime birthDate { get; set; }
 
-      private string email { get; set; }
+      public string email { get; set; }
 
-      private DateTime dateRegister { get; set; }
+      public DateTime dateRegister { get; set; }
 
-      private bool active { get; set; }
+      public bool active { get; set; }
+
+
 
       public User()
       {

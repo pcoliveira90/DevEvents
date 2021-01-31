@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,12 +8,13 @@ namespace DevEvents.API.Entities
 {
    public class Subscription
    {
-      private int id { get; set; }
+      public int id { get; set; }
 
-      private int idUser { get; set; }
+      public int idUser { get; set; }
 
-      private int idCategory { get; set; }
+      public int idCategory { get; set; }
 
+   
       public Subscription()
       {
       }

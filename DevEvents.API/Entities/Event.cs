@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,27 +8,28 @@ namespace DevEvents.API.Entities
 {
    public class Event
    {
-      private int id { get; set; }
+      public int id { get; set; }
 
-      private int idCategory { get; set; }
+      public int idCategory { get; set; }
 
-      private Category category { get; set; }
+      public Category category { get; set; }
 
-      private int idUser { get; set; }
+      public int idUser { get; set; }
 
-      private User user { get; set; }
+      public User user { get; set; }
 
-      private string title { get; set; }
+      public string title { get; set; }
 
-      private string description { get; set; }
+      public string description { get; set; }
 
-      private bool active { get; set; }
+      public bool active { get; set; }
 
-      private DateTime dateStart { get; set; }
+      public DateTime dateStart { get; set; }
 
-      private DateTime dateEnd { get; set; }
+      public DateTime dateEnd { get; set; }
 
-      private DateTime dateRegister { get; set; }
+      public DateTime dateRegister { get; set; }
+
 
       public Event()
       {
