@@ -29,6 +29,10 @@ namespace DevEvents.API.Entities
 
       private DateTime dateRegister { get; set; }
 
+      public Event()
+      {
+      }
+
       public Event(int id, string title, string description, bool active, DateTime dateStart, DateTime dateEnd, DateTime dateRegister)
       {
          this.id = id;

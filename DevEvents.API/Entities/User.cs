@@ -19,6 +19,10 @@ namespace DevEvents.API.Entities
 
       private bool active { get; set; }
 
+      public User()
+      {
+      }
+
       public User(int id, string username, DateTime birthDate, string email, DateTime dateRegister, bool active)
       {
          this.id = id;

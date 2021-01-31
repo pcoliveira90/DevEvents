@@ -13,6 +13,10 @@ namespace DevEvents.API.Entities
 
       private bool active { get; set; }
 
+      public Category()
+      {
+      }
+
       public Category(int id, string description, bool active)
       {
          this.id = id;
