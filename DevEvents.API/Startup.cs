@@ -1,7 +1,9 @@
+using DevEvents.API.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +30,11 @@ namespace DevEvents.API
       {
 
          services.AddControllers();
+
+         var connectString = Configuration.GetConnectionString("DevEventsCn");
+
+         services.AddDbContext<DevEventsDbContext>(options => options.UseSqlServer(connectString));
+
          services.AddSwaggerGen(c =>
          {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevEvents.API", Version = "v1" });
