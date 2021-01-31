@@ -39,5 +39,11 @@ namespace DevEvents.API.Controllers
       {
          return NoContent();
       }
+
+      [HttpPost("{id}")]
+      public IActionResult InsertSubscription(int id, [FromBody] Subscription obj)
+      {
+         return NoContent();
+      }
    }
 }
